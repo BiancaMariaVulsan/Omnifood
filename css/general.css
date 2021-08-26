@@ -26,6 +26,8 @@ Paragraph default: 1.6
 - Tints: 
 #fdf2e9
 #fae5de
+#eb984e
+#45260a
 - Shades: #cf711f
 - Accents: 
 - Greys:
@@ -34,6 +36,8 @@ Paragraph default: 1.6
 #333
 
 --- 05 SHADOWS
+
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.75);
 
 --- 06 BORDER-RADIUS
 
@@ -126,7 +130,7 @@ body {
 .heading-secondary {
 	font-size: 4.4rem;
 	line-height: 1.2;
-	margin-bottom: 9.6rem;
+	margin-bottom: 12.8rem;
 }
 
 .heding-ternary {
@@ -146,7 +150,8 @@ body {
 }
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+.btn {
 	display: inline-block;
 
 	text-decoration: none;
@@ -154,6 +159,11 @@ body {
 	font-weight: 600;
 	padding: 1.6rem 3.2rem;
 	border-radius: 9px;
+
+	/* For .btn */
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
 
 	/* Put the transition on original "state" */
 	/* transition: background-color 0.3s; */
@@ -185,6 +195,18 @@ body {
 
 	/* Trick to add border inside */
 	box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+	background-color: #45260a;
+	color: #fdf2e9;
+	align-self: end;
+	padding: 1.2rem;
+}
+
+.btn--form:hover {
+	background-color: #fff;
+	color: #555;
 }
 
 .link:link,
@@ -221,6 +243,13 @@ body {
 	width: 3rem;
 	height: 3rem;
 	color: #e67e22;
+}
+
+*:focus {
+	outline: none;
+	/* outline: 4px dotted #e67e22; */
+	/* outline-offset: 8px; */
+	box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* HELPER CLASES */
